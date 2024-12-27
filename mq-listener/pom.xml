@@ -3,39 +3,50 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.1</version>
+		<groupId>com.ambro.mq</groupId>
+		<artifactId>ibm-mq-spring-boot</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ambro.mq</groupId>
-	<artifactId>ibm-mq-spring-boot</artifactId>
+	<artifactId>mq-listener</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ibm-mq-spring-boot</name>
-	<description>Demo project for Spring Boot</description>
-	<modules>
-		<module>mq-service</module>
-		<module>mq-listener</module>
-	</modules>
-	<packaging>pom</packaging>
+	<name>mq-listener</name>
+	<description>Demo project for Spring Boot - IBM MQ Listener</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+			<version>3.3.5</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ibm.mq</groupId>
-			<artifactId>mq-jms-spring-boot-starter</artifactId>
-			<version>3.0.6</version>
-		</dependency>
+		<!-- IBM MQ dependencies -->
+			<dependency>
+				<groupId>com.ibm.mq</groupId>
+				<artifactId>mq-jms-spring-boot-starter</artifactId>
+				<version>3.0.0</version>
+			</dependency>
+
+
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
